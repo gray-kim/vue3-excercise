@@ -1,41 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" title="vue3 title" />
-  <MyCheckbox :checked="foo"
-              @change="val => {foo = val}"
-              value="some value" />
-  <p>
-    <dropdownlist
-        :data-items="state.categories"
-        :data-item-key="'CategoryID'"
-        :text-field="'CategoryName'"
-    >
-    </dropdownlist>
-  </p>
-  <grid
-      :data-items="state.products"
-      :columns="state.columns"
-  ></grid>
+<!--  <img alt="Vue logo" src="./assets/logo.png" />-->
+<!--  <HelloWorld msg="Hello Vue 3.0 + Vite" title="vue3 title" />-->
+<!--  <MyCheckbox :checked="foo"-->
+<!--              @change="val => {foo = val}"-->
+<!--              value="some value" />-->
+  <KendoGridCustom :data="state"></KendoGridCustom>
 </template>
 
 <script>
+import { reactive } from 'vue';
+
 import categories from './appdata/categories.json';
 import products from './appdata/products.json';
-import { process } from '@progress/kendo-data-query';
-import { Grid } from '@progress/kendo-vue-grid';
-import { DropDownList } from '@progress/kendo-vue-dropdowns';
-import { reactive } from 'vue';
-import '@progress/kendo-theme-default/dist/all.css';
+
+import KendoGridCustom from './components/KendoGridCustom.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import MyCheckbox from './components/MyCheckbox.vue';
 
 export default {
   name: 'Vue3 App Test',
   components: {
+    KendoGridCustom,
     HelloWorld,
-    MyCheckbox,
-    'dropdownlist': DropDownList,
-    'grid': Grid,
+    MyCheckbox
   },
   setup() {
     const state = reactive({
