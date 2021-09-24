@@ -109,6 +109,13 @@
   dependencies:
     "@progress/kendo-vue-common" "2.4.3"
 
+"@progress/kendo-vue-animation@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@progress/kendo-vue-animation/-/kendo-vue-animation-2.5.0.tgz#4b8c8067e9c0161ffa772667947016707dd60081"
+  integrity sha512-q07SBTHaTLEWD4OgTTRqTIFMtnv8u3Nzh5OBNS+xTz2syUvgfvtAhJI10ZH39kJDtdHTOfjoCmDAQzKVJfyKCw==
+  dependencies:
+    "@progress/kendo-vue-common" "2.5.0"
+
 "@progress/kendo-vue-buttons@2.4.3":
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@progress/kendo-vue-buttons/-/kendo-vue-buttons-2.4.3.tgz#b82c826e8483c86651941c477af01877381fe261"
@@ -117,10 +124,25 @@
     "@progress/kendo-vue-common" "2.4.3"
     "@progress/kendo-vue-popup" "2.4.3"
 
+"@progress/kendo-vue-buttons@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@progress/kendo-vue-buttons/-/kendo-vue-buttons-2.5.0.tgz#87d0c0c97269e1d535b817ef7974c84da394bd6c"
+  integrity sha512-bF2CUKIZHmNwFzNeIkEF2xAMQO8ktEBO+vTn7FmBL4dOsXp6aezvKaEiS++z9HwgV7uBC0qdz0zdCp7yJ0YxmQ==
+  dependencies:
+    "@progress/kendo-vue-common" "2.5.0"
+    "@progress/kendo-vue-popup" "2.5.0"
+
 "@progress/kendo-vue-common@2.4.3":
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@progress/kendo-vue-common/-/kendo-vue-common-2.4.3.tgz#d199dc8b2ded6816616a7eb60fff9e28ec01a011"
   integrity sha512-AxvSElycBwgzMSOEqti2/etPyTVgL2JprUi7NzocfIvaIb1LM4BEUTnR+XzzaIqrd405jP+3naFDXejP3v6d2w==
+  dependencies:
+    "@telerik/kendo-draggable" "2.2.0"
+
+"@progress/kendo-vue-common@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@progress/kendo-vue-common/-/kendo-vue-common-2.5.0.tgz#ff7e913c5cdf8c316144c5f62dadf71b2840b7f5"
+  integrity sha512-sCqYCanuo48FZGoizO0y60KxvcVAntgvYkrtnP7Mh9eMP0Z8M45AfuDdKkY3Retqhw3rcxkFnu1XWplpU3gkhg==
   dependencies:
     "@telerik/kendo-draggable" "2.2.0"
 
@@ -186,6 +208,15 @@
     "@progress/kendo-popup-common" "^1.6.1"
     "@progress/kendo-vue-animation" "2.4.3"
     "@progress/kendo-vue-common" "2.4.3"
+
+"@progress/kendo-vue-popup@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@progress/kendo-vue-popup/-/kendo-vue-popup-2.5.0.tgz#b40ebdaa8b6b6fce7eda880d82bda1fb41b2bc15"
+  integrity sha512-SiKi0xzId4M+GIV/iiif9RcpROKjIoL2pJ0jcw8KLqiY6WQG7hHqZATnsmEn2A10w9NFwcbPcay5lqAlKKe0nQ==
+  dependencies:
+    "@progress/kendo-popup-common" "^1.6.1"
+    "@progress/kendo-vue-animation" "2.5.0"
+    "@progress/kendo-vue-common" "2.5.0"
 
 "@progress/pako-esm@^1.0.1":
   version "1.0.1"
