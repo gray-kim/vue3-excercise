@@ -19,6 +19,7 @@
     "@progress/kendo-vue-grid": "^2.4.3",
     "@progress/kendo-vue-inputs": "^2.4.3",
     "@progress/kendo-vue-intl": "^2.4.3",
+    "axios": "^0.21.4",
     "vue": "^3.0.4"
   },
   "devDependencies": {
