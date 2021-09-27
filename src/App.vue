@@ -4,10 +4,15 @@
   <MyCheckbox :checked="foo"
               @change="val => {foo = val}"
               value="some value" />
-  <button @click="getUserList">userList가져오기</button>
+
   <KendoDropdown :data="categoryDropdown"></KendoDropdown>
-  <h1>User List Grid</h1>
+
+  <h1>Durunubi List Table</h1>
+  <Durunubi></Durunubi>
+
+  <h1>User List Grid <button @click="getUserList">userList가져오기</button> </h1>
   <KendoGridCustom v-if="userGrid.dataItems.length > 0" :data="userGrid"></KendoGridCustom>
+
   <h1>Product List Grid</h1>
   <KendoGridCustom :data="state"></KendoGridCustom>
 </template>
@@ -22,6 +27,7 @@ import KendoGridCustom from './components/KendoGridCustom.vue';
 import KendoDropdown from "./components/KendoDropdown.vue";
 import HelloWorld from './components/HelloWorld.vue';
 import MyCheckbox from './components/MyCheckbox.vue';
+import Durunubi from "./components/Durunubi.vue";
 
 export default {
   name: 'Vue3 App Test',
@@ -29,7 +35,8 @@ export default {
     KendoGridCustom,
     KendoDropdown,
     HelloWorld,
-    MyCheckbox
+    MyCheckbox,
+    Durunubi
   },
   setup() {
     const state = reactive({
@@ -63,20 +70,19 @@ export default {
     }
   },
   mounted() {
-    console.log("mounted");
+    // console.log("mounted");
     this.init();
     // this.getUserList();
   },
   created () {
-    console.log("created");
+    // console.log("created");
   },
   computed() {
-    console.log("computed");
+    // console.log("computed");
   },
   methods: {
     init: function() {
       this.msg = 'this is computed message!';
-      console.log("init method",this.msg);
     },
     getUserList: function() {
       let $this = this;
