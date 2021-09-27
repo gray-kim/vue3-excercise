@@ -1,11 +1,14 @@
 <template>
-<!--  <img alt="Vue logo" src="./assets/logo.png" />-->
-<!--  <HelloWorld msg="Hello Vue 3.0 + Vite" title="vue3 title" />-->
-<!--  <MyCheckbox :checked="foo"-->
-<!--              @change="val => {foo = val}"-->
-<!--              value="some value" />-->
-  <button @click="getUserList">데이터가져오기</button>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <HelloWorld msg="Hello Vue 3.0 + Vite" title="vue3 title" />
+  <MyCheckbox :checked="foo"
+              @change="val => {foo = val}"
+              value="some value" />
+  <button @click="getUserList">userList가져오기</button>
+  <KendoDropdown :data="categoryDropdown"></KendoDropdown>
+  <h1>User List Grid</h1>
   <KendoGridCustom v-if="userGrid.dataItems.length > 0" :data="userGrid"></KendoGridCustom>
+  <h1>Product List Grid</h1>
   <KendoGridCustom :data="state"></KendoGridCustom>
 </template>
 
@@ -16,6 +19,7 @@ import categories from './appdata/categories.json';
 import products from './appdata/products.json';
 
 import KendoGridCustom from './components/KendoGridCustom.vue';
+import KendoDropdown from "./components/KendoDropdown.vue";
 import HelloWorld from './components/HelloWorld.vue';
 import MyCheckbox from './components/MyCheckbox.vue';
 
@@ -23,6 +27,7 @@ export default {
   name: 'Vue3 App Test',
   components: {
     KendoGridCustom,
+    KendoDropdown,
     HelloWorld,
     MyCheckbox
   },
@@ -52,19 +57,22 @@ export default {
           { field: 'avatar'}
         ],
       },
+      categoryDropdown: {
+        dataItems: categories
+      }
     }
   },
   mounted() {
     console.log("mounted");
     this.init();
+    // this.getUserList();
   },
-  // created () {
-  //   console.log("created");
-  //   // this.getUserList();
-  // },
-  // computed() {
-  //   console.log("computed");
-  // },
+  created () {
+    console.log("created");
+  },
+  computed() {
+    console.log("computed");
+  },
   methods: {
     init: function() {
       this.msg = 'this is computed message!';
