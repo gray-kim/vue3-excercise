@@ -1,14 +1,22 @@
 <template>
-  <p>
-    <dropdownlist
-        :data-items="data.categories"
-        :data-item-key="'CategoryID'"
-        :text-field="'CategoryName'">
-    </dropdownlist>
-    <k-button>Default</k-button>
-  </p>
+<!--  <p>-->
+<!--    <dropdownlist-->
+<!--        :data-items="data.categories"-->
+<!--        :data-item-key="'CategoryID'"-->
+<!--        :text-field="'CategoryName'">-->
+<!--    </dropdownlist>-->
+<!--    <k-button>Default</k-button>-->
+<!--  </p>-->
+<!--  <grid-->
+<!--      :data-items="data.users"-->
+<!--      :columns="data.userColumns">-->
+<!--    <grid-norecords>-->
+<!--      There is no data available custom-->
+<!--    </grid-norecords>-->
+<!--  </grid>-->
   <grid
-      :data-items="data.products"
+      v-if="data.dataItems"
+      :data-items="data.dataItems"
       :columns="data.columns">
     <grid-norecords>
       There is no data available custom
