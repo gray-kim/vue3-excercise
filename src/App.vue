@@ -10,8 +10,9 @@
   <h1>Durunubi List Table</h1>
   <Durunubi></Durunubi>
 
-  <h1>User List Grid <button @click="getUserList">userList가져오기</button> </h1>
-  <KendoGridCustom v-if="userGrid.dataItems.length > 0" :data="userGrid"></KendoGridCustom>
+  <h1>User List Grid <button @click="getUserList">userList가져오기</button></h1>
+  <UserList v-if="userGrid.dataItems.length > 0" :data="userGrid"></UserList>
+<!--  <KendoGridCustom v-if="userGrid.dataItems.length > 0" :data="userGrid"></KendoGridCustom>-->
 
   <h1>Product List Grid</h1>
   <KendoGridCustom :data="state"></KendoGridCustom>
@@ -28,6 +29,7 @@ import KendoDropdown from "./components/KendoDropdown.vue";
 import HelloWorld from './components/HelloWorld.vue';
 import MyCheckbox from './components/MyCheckbox.vue';
 import Durunubi from "./components/Durunubi.vue";
+import UserList from "./components/UserList.vue";
 
 export default {
   name: 'Vue3 App Test',
@@ -36,7 +38,8 @@ export default {
     KendoDropdown,
     HelloWorld,
     MyCheckbox,
-    Durunubi
+    Durunubi,
+    UserList
   },
   setup() {
     const state = reactive({

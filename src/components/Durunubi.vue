@@ -22,7 +22,7 @@ export default {
   name: "Durunubi",
   data() {
     return {
-      openApiKey: 'mIQqG%2F6NH6kX3XkNWhMhJpNvOiU9LBBq9EyKXbDPDdajZP5PlLK7l6Ya7pzePzkWqdv8AS2oAheLvR%2BA77BUmw%3D%3D',
+      openApiKey: 'EDJIDwrMCACWfGJTgBlbNjPavrXocc%2B1XUtfZAkqjicmqFnxtzTGkYxCp%2FP9cg9RygYNpGIcCvtKmE2%2FxuAe5w%3D%3D',
       courseList: []
     }
   },
